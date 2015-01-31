@@ -38,7 +38,36 @@ class ViewController: UIViewController {
         ))
         self.firstContainer.backgroundColor = UIColor.redColor()
         self.view.addSubview(self.firstContainer)
+        
+        self.secondContainer = UIView(frame: CGRect(
+            x: self.view.bounds.origin.x + self.kMarginForView,
+            y: self.firstContainer.frame.height,
+            width: self.view.bounds.width - (self.kMarginForView * 2),
+            height: self.view.bounds.height * ( 3 * self.kSixth)
         ))
+        self.secondContainer.backgroundColor = UIColor.blackColor()
+        self.view.addSubview(self.secondContainer)
+        
+        self.thirdContainer = UIView(frame: CGRect(
+            x: self.view.bounds.origin.x + self.kMarginForView,
+            y: self.firstContainer.frame.height + self.secondContainer.frame.height,
+            width: self.view.bounds.width - (self.kMarginForView * 2),
+            height: self.view.bounds.height * self.kSixth
+        ))
+        self.thirdContainer.backgroundColor = UIColor.lightGrayColor()
+        self.view.addSubview(self.thirdContainer)
+        
+        self.fourthContainer = UIView(frame: CGRect(
+            x: self.view.bounds.origin.x + self.kMarginForView,
+            y: self.firstContainer.frame.height +
+                self.secondContainer.frame.height +
+                self.thirdContainer.frame.height,
+            width: self.view.bounds.width - (self.kMarginForView * 2),
+            height: self.view.bounds.height * self.kSixth
+            ))
+        self.fourthContainer.backgroundColor = UIColor.blackColor()
+        self.view.addSubview(self.fourthContainer)
+
     }
 }
 
